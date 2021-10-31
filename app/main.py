@@ -3,19 +3,19 @@ import pickle
 
 from flask import Flask, request, Response
 
-with open("dict.pickle", "rb") as f:
+with open("./dict.pickle", "rb") as f:
     vectorizer = pickle.load(f)
 
-with open("rfc.pickle", "rb") as f:
+with open("./rfc.pickle", "rb") as f:
     rfc = pickle.load(f)
 
-with open("svc.pickle", "rb") as f:
+with open("./svc.pickle", "rb") as f:
     svc = pickle.load(f)
 
-with open("lsvc.pickle", "rb") as f:
+with open("./lsvc.pickle", "rb") as f:
     lsvc= pickle.load(f)
 
-with open("dtc.pickle", "rb") as f:
+with open("./dtc.pickle", "rb") as f:
     dtc= pickle.load(f)
 
 
