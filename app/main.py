@@ -28,6 +28,7 @@ def index():
 @app.route("/predict", methods=["POST"])
 def predict():
     body = request.get_json()       #{text: "Tom is a good boy", model: "RFC"}
+    print(body)
     vectorized_body= vectorizer.transform(body.text)
     if body.model =="RFC":
         prediction = rfc.predict(vectorized_body)
