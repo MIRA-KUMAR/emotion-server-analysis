@@ -29,14 +29,14 @@ def index():
 def predict():
     body = request.get_json()       #{text: "Tom is a good boy", model: "RFC"}
     print(body)
-    vectorized_body= vectorizer.transform(body.text)
-    if body.model =="RFC":
+    vectorized_body= vectorizer.transform(body["text"])
+    if body["model"] =="RFC":
         prediction = rfc.predict(vectorized_body)
         return prediction[0]
-    if body.model =="SVC":
+    if body["model"] =="SVC":
         prediction = svc.predict(vectorized_body)
         return prediction[0]
-    if body.model =="LSVC":
+    if body["model"] =="LSVC":
         prediction = lsvc.predict(vectorized_body)
         return prediction[0]
     
