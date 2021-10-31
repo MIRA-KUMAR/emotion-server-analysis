@@ -3,7 +3,7 @@ import json
 from flask import Flask, request, Response
 
 
-app = Flask('fff')
+app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def index():
@@ -11,5 +11,4 @@ def index():
 
 
 
-if __name__ == '__main__':
-    app.run()
+
