@@ -19,4 +19,4 @@ There are some general library and server requirements for the project and some 
       a. The CSV file is read through Pandas library and 'tweet_id' attribute is dropped. The dataframe is converted to a NumPy record array. 
          Append the labels in 'y' attribute and appending the subsentences or phrases in 'x' attribute with number of occurances. 
   
-  2. The x and y datasets are split into training and test datasets using <mark> train_test_split </mark> function. 
+  2. The x and y datasets are split into training and test datasets using **train_test_split** function. 
