@@ -20,3 +20,14 @@ There are some general library and server requirements for the project and some 
          Append the labels in 'y' attribute and appending the subsentences or phrases in 'x' attribute with number of occurances. 
   
   2. The x and y datasets are split into training and test datasets using **train_test_split** function. 
+     Using DictVectorizer, we convert the values to sparse matrices and store it in pickle file.
+     With that, the training dataset is modified using **fit_transform** and the test dataset is modified using **transform** function. 
+     
+  3. The following ML classifiers are used to fit the training datasets and dumped to each pickle files respectively:
+  
+            1. RandomForestClassifier == RFC
+            2. SVC
+            3. LinearSVC 
+            4. DecisionTreeClassifier 
+
+   4. 
