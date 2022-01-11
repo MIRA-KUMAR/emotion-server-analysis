@@ -19,15 +19,19 @@ There are some general library and server requirements for the project and some 
       a. The CSV file is read through Pandas library and 'tweet_id' attribute is dropped. The dataframe is converted to a NumPy record array. 
          Append the labels in 'y' attribute and appending the subsentences or phrases in 'x' attribute with number of occurances. 
   
-  2. The x and y datasets are split into training and test datasets using <mark>**train_test_split**</mark> function. 
+  2. The x and y datasets are split into training and test datasets using `train_test_split` function. 
      Using DictVectorizer, we convert the values to sparse matrices and store it in pickle file.
-     With that, the training dataset is modified using **fit_transform** and the test dataset is modified using **transform** function. 
+     With that, the training dataset is modified using **fit_transform** and the test dataset is modified using `transform` function. 
      
-  3. The following ML classifiers are used to fit the training datasets and dumped to each pickle files respectively:
+  3. The following ML classifiers are used to fit the training datasets and are dumped to each respective pickle files:
   
             1. RandomForestClassifier == RFC
             2. SVC
             3. LinearSVC 
             4. DecisionTreeClassifier 
 
-   4. 
+# 4. Predicting the data: <Inside @APP folder>
+
+  `Flask` framework is used to `GET` and `POST` the predicted data. 
+  Input data is sent with text data and model (SVC/ LinearSVC/ DecisionTreeClassifier/ RandomForestClassifier) which is to be used.
+  The emotion prediction of the text data is predicted using `predict` function of each classifiers and then displayed.
